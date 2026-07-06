@@ -319,42 +319,106 @@ transform:translateY(0);
 }
 
 }
+/* PHONE */
+
 @media(max-width:768px){
 
-    .container{
-        width:95%;
+    .hero{
+        min-height:100svh;
+        padding:20px 10px;
     }
 
-    .title{
-        font-size:45px !important;
-        margin-bottom:25px;
+    .content{
+        min-height:100svh;
+        width:100%;
+        padding:20px 5px;
     }
 
-    .menu{
-        grid-template-columns:1fr !important;
-        gap:15px;
-    }
-
-    .card{
-        padding:16px;
-        font-size:18px;
+    .birthday{
+        margin-bottom:30px;
+        gap:0;
     }
 
     .birthday span{
-        font-size:55px !important;
+        font-size:58px !important;
+    }
+
+    /* Softer curve for phones */
+    .birthday span:nth-child(1){transform:translateY(12px);}
+    .birthday span:nth-child(2){transform:translateY(9px);}
+    .birthday span:nth-child(3){transform:translateY(6px);}
+    .birthday span:nth-child(4){transform:translateY(3px);}
+    .birthday span:nth-child(5){transform:translateY(0);}
+
+    .birthday span:nth-child(7){transform:translateY(0);}
+    .birthday span:nth-child(8){transform:translateY(3px);}
+    .birthday span:nth-child(9){transform:translateY(6px);}
+    .birthday span:nth-child(10){transform:translateY(9px);}
+    .birthday span:nth-child(11){transform:translateY(12px);}
+    .birthday span:nth-child(12){transform:translateY(15px);}
+    .birthday span:nth-child(13){transform:translateY(18px);}
+    .birthday span:nth-child(14){transform:translateY(20px);}
+    .birthday span:nth-child(16){transform:translateY(12px);}
+
+    .love-text{
+        margin-bottom:20px;
     }
 
     .love-text span{
-        font-size:28px !important;
+        font-size:26px !important;
     }
 
     .question{
-        font-size:20px !important;
+        margin-top:10px;
+        font-size:18px !important;
+        line-height:1.5;
+        padding:0 15px;
     }
 
     .btn{
-        padding:15px 35px;
+        margin-top:25px;
+        padding:15px 40px;
         font-size:18px;
+    }
+}
+
+
+/* SMALL PHONES */
+
+@media(max-width:480px){
+
+    .birthday span{
+        font-size:48px !important;
+    }
+
+    /* Extra soft curve */
+    .birthday span:nth-child(1){transform:translateY(8px);}
+    .birthday span:nth-child(2){transform:translateY(6px);}
+    .birthday span:nth-child(3){transform:translateY(4px);}
+    .birthday span:nth-child(4){transform:translateY(2px);}
+    .birthday span:nth-child(5){transform:translateY(0);}
+
+    .birthday span:nth-child(7){transform:translateY(0);}
+    .birthday span:nth-child(8){transform:translateY(2px);}
+    .birthday span:nth-child(9){transform:translateY(4px);}
+    .birthday span:nth-child(10){transform:translateY(6px);}
+    .birthday span:nth-child(11){transform:translateY(8px);}
+    .birthday span:nth-child(12){transform:translateY(10px);}
+    .birthday span:nth-child(13){transform:translateY(12px);}
+    .birthday span:nth-child(14){transform:translateY(14px);}
+    .birthday span:nth-child(16){transform:translateY(8px);}
+
+    .love-text span{
+        font-size:22px !important;
+    }
+
+    .question{
+        font-size:16px !important;
+    }
+
+    .btn{
+        padding:14px 35px;
+        font-size:16px;
     }
 }
 </style>
