@@ -18,9 +18,9 @@
 
 body{
     font-family:'Poppins',sans-serif;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
 }
-
 /* Background */
 /* Popup */
 
@@ -114,8 +114,9 @@ body{
     }
 }
 .hero{
-    width:100%;
-    height:100vh;
+  width:100%;
+    min-height:100svh;
+    padding:30px 15px;
    background: url("background.png") center center / cover no-repeat;
     position:relative;
     display:flex;
@@ -289,7 +290,44 @@ body{
         font-size:45px;
     }
 }
+@media(max-width:768px){
 
+    .container{
+        width:95%;
+    }
+
+    .title{
+        font-size:45px !important;
+        margin-bottom:25px;
+    }
+
+    .menu{
+        grid-template-columns:1fr !important;
+        gap:15px;
+    }
+
+    .card{
+        padding:16px;
+        font-size:18px;
+    }
+
+    .birthday span{
+        font-size:55px !important;
+    }
+
+    .love-text span{
+        font-size:28px !important;
+    }
+
+    .question{
+        font-size:20px !important;
+    }
+
+    .btn{
+        padding:15px 35px;
+        font-size:18px;
+    }
+}
 </style>
 </head>
 <body>
