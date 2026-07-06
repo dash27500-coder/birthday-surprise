@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Choose Your Surprise ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow:hidden;
+}
+
+/* Background */
+/* Popup */
+
+.popup{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.65);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:100;
+}
+
+.popup.show{
+    display:flex;
+}
+
+.popup-box{
+    width:500px;
+    max-width:90%;
+
+    padding:50px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:30px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.4);
+
+    animation:popupAnim .4s ease;
+}
+
+.popup-box h2{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+
+    margin-bottom:20px;
+}
+
+.popup-box p{
+    font-size:22px;
+
+    margin-bottom:35px;
+}
+
+.popup-box button{
+    padding:15px 40px;
+
+    border:none;
+    border-radius:40px;
+
+    background:linear-gradient(
+        135deg,
+        #ff4b91,
+        #ff7eb3
+    );
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.popup-box button:hover{
+    transform:scale(1.05);
+}
+
+@keyframes popupAnim{
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+.hero{
+    width:100%;
+    height:100vh;
+    background:url("images/background.png") center center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Premium overlay */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        ellipse at center,
+        rgba(0,0,0,.10),
+        rgba(0,0,0,.35)
+    );
+
+    backdrop-filter:blur(2px);
+}
+
+/* Content */
+
+.container{
+    position:relative;
+    z-index:5;
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+}
+
+/* Heading */
+
+.title{
+    font-family:'Great Vibes',cursive;
+    font-size:90px;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #fff8ec,
+        #e7d1a0
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 2px 4px rgba(0,0,0,.25);
+
+    margin-bottom:50px;
+
+    animation:float 5s ease-in-out infinite;
+}
+
+/* Menu */
+
+.menu{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+/* Card */
+
+.card{
+    padding:25px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:20px;
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.15);
+}
+
+.card:hover{
+    transform:
+        translateY(-8px)
+        scale(1.03);
+
+    background:rgba(255,255,255,.16);
+
+    box-shadow:
+        0 20px 40px rgba(0,0,0,.25);
+}
+
+/* Stars */
+
+.stars{
+    position:absolute;
+    inset:0;
+    overflow:hidden;
+    z-index:2;
+}
+
+.star{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 10px white,
+        0 0 20px white;
+
+    animation:twinkle linear infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.2;
+        transform:scale(.5);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(2);
+    }
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .menu{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .title{
+        font-size:60px;
+    }
+}
+
+@media(max-width:600px){
+
+    .menu{
+        grid-template-columns:1fr;
+    }
+
+    .title{
+        font-size:45px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="hero">
+
+    <div class="stars" id="stars"></div>
+
+    <div class="container">
+
+        <h1 class="title">
+            Choose Your Surprise ❤️
+        </h1>
+
+        <div class="menu">
+
+    <div class="card" onclick="showOption('🎁 Wait 🎁')">
+        🎁 Wanna See Your Gift?
+    </div>
+
+    <div class="card" onclick="showOption('💃Play the song💃 ')">
+        💃 Dance With Me
+    </div>
+
+    <div class="card" onclick="showOption('💋 ok them come here darling 💋 ')">
+        💋 Give Me A Kiss
+    </div>
+
+    <div class="card" onclick="showOption('🤗ok them come here darling🤗')">
+        🤗 Give Me A Hug
+    </div>
+
+    <div class="card" onclick="showOption('🛌Come to bed 🍑')">
+        🛌🍑 Sex
+    </div>
+
+    <div class="card" onclick="showOption('🛁Remove it and come with me🛁')">
+        🛁 Romantic Bath
+    </div>
+
+    <div class="card" onclick="showOption('💆come to bed babe💆')">
+        💆 Body Massage
+    </div>
+
+    <div class="card" onclick="showOption('🌹come to bed babe🌹')">
+        🌹 Special Massage
+    </div>
+
+    <div class="card" onclick="showOption('🤍come to bed babe🤍')">
+        🤍 Cuddle
+    </div>
+
+  
+
+</div>
+<!-- Popup -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-box">
+
+        <h2 id="selectedTitle">
+            Selected
+        </h2>
+
+        <p>
+            Enjoy it ❤️
+        </p>
+
+        <button onclick="closePopup()">
+            ← Back To Menu
+        </button>
+
+    </div>
+
+</div>
+    </div>
+
+</div>
+
+<script>
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<180;i++){
+
+    const star=document.createElement("div");
+
+    star.classList.add("star");
+
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+
+    let size=Math.random()*4+1;
+
+    star.style.width=size+"px";
+    star.style.height=size+"px";
+
+    star.style.animationDuration=
+        (Math.random()*3+2)+"s";
+
+    star.style.animationDelay=
+        Math.random()*5+"s";
+
+    stars.appendChild(star);
+}
+function showOption(text){
+
+    document.getElementById(
+        "selectedTitle"
+    ).innerHTML =
+        "You Selected:<br>" + text;
+
+    document.getElementById(
+        "popup"
+    ).classList.add("show");
+}
+
+function closePopup(){
+
+    document.getElementById(
+        "popup"
+    ).classList.remove("show");
+}
+</script>
+
+</body>
+</html>
