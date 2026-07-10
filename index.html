@@ -231,30 +231,42 @@ body{
     padding:18px 60px;
     font-size:22px;
     font-weight:600;
+    text-decoration:none;
+
+    color:#2d1c00;
 
     border-radius:60px;
-    text-decoration:none;
-    color:white;
+    border:2px solid rgba(255,255,255,.35);
 
     background:linear-gradient(
         135deg,
-        #ff4b91,
-        #ff7eb3
+        #fff8d6 0%,
+        #f7d774 25%,
+        #d4af37 55%,
+        #b8860b 100%
     );
 
     box-shadow:
-        0 0 25px rgba(255,105,180,.5),
-        0 10px 40px rgba(255,80,140,.5);
+        0 0 25px rgba(212,175,55,.45),
+        0 12px 35px rgba(184,134,11,.35);
 
-    transition:.4s;
+    transition:.4s ease;
 }
 
 .btn:hover{
     transform:translateY(-5px) scale(1.05);
 
+    background:linear-gradient(
+        135deg,
+        #fffce8,
+        #ffd86a,
+        #e3be4c,
+        #c99600
+    );
+
     box-shadow:
-        0 0 35px rgba(255,105,180,.8),
-        0 15px 60px rgba(255,80,140,.8);
+        0 0 40px rgba(255,215,0,.75),
+        0 15px 50px rgba(212,175,55,.55);
 }
 
 .stars{
