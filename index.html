@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -319,7 +319,124 @@ transform:translateY(0);
 }
 
 }
-/* PHONE */
+/* PHONE *//* ===========================
+   Luxury Happy Anniversary
+=========================== */
+
+.anniversary-wrapper{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:45px;
+    animation:fadeIn 2s ease;
+}
+
+.anniversary-title{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    line-height:1;
+}
+
+.anniversary-title span:first-child{
+    font-family:'Cinzel',serif;
+    font-size:52px;
+    font-weight:700;
+    letter-spacing:10px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        180deg,
+        #fffef8 0%,
+        #f8e7ba 45%,
+        #d8a948 100%
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 0 20px rgba(255,255,255,.25),
+        0 0 40px rgba(212,175,55,.25);
+}
+
+.anniversary-title span:last-child{
+    font-family:'Great Vibes',cursive;
+    font-size:120px;
+    font-weight:400;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #f7e5bb,
+        #d4af37
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:
+        0 4px 18px rgba(255,255,255,.25),
+        0 6px 30px rgba(212,175,55,.35);
+
+    animation:luxuryFloat 5s ease-in-out infinite;
+}
+
+.ornament{
+    font-size:28px;
+    color:#e6c56f;
+    letter-spacing:10px;
+    text-shadow:
+        0 0 12px rgba(255,215,0,.4);
+}
+
+.ornament.top{
+    margin-bottom:18px;
+}
+
+.ornament.bottom{
+    margin-top:18px;
+}
+
+@media(max-width:768px){
+
+    .anniversary-title span:first-child{
+        font-size:28px;
+        letter-spacing:6px;
+    }
+
+    .anniversary-title span:last-child{
+        font-size:72px;
+    }
+
+    .ornament{
+        font-size:20px;
+        letter-spacing:6px;
+    }
+
+    .anniversary-wrapper{
+        margin-bottom:30px;
+    }
+}
+
+@media(max-width:480px){
+
+    .anniversary-title span:first-child{
+        font-size:22px;
+        letter-spacing:4px;
+    }
+
+    .anniversary-title span:last-child{
+        font-size:56px;
+    }
+
+    .ornament{
+        font-size:16px;
+        letter-spacing:4px;
+    }
+}
 
 @media(max-width:768px){
 
@@ -433,29 +550,22 @@ transform:translateY(0);
 <div class="content">
 
 <!-- Happy Birthday is already on your background image -->
-<h1 class="birthday">
-    <span>H</span>
-    <span>a</span>
-    <span>p</span>
-    <span>p</span>
-    <span>y</span>
+<div class="anniversary-wrapper">
 
-    <span>&nbsp;</span>
+    <div class="ornament top">
+        ✦ ❦ ✦
+    </div>
 
-    <span>B</span>
-    <span>i</span>
-    <span>r</span>
-    <span>t</span>
-    <span>h</span>
-    <span>d</span>
-    <span>a</span>
-    <span>y</span>
+    <h1 class="anniversary-title">
+        <span>Happy</span>
+        <span>Anniversary</span>
+    </h1>
 
-    <span>&nbsp;</span>
+    <div class="ornament bottom">
+        ✦ ❦ ✦
+    </div>
 
-    <span>❤️</span>
-</h1>
-
+</div>
 <div class="love-text">
     <span>I</span>
     <span>&nbsp;</span>
